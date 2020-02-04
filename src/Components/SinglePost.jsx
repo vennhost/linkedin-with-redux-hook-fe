@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { Container, Row, Col, Image, Card, ButtonGroup } from "react-bootstrap";
 import { Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
+import PropTypes from "prop-types"
 
 export default class SinglePost extends Component {
   render() {
@@ -45,4 +46,7 @@ export default class SinglePost extends Component {
         </Container>
     );
   }
+}
+SinglePost.propTypes = {
+post: PropTypes.object
 }

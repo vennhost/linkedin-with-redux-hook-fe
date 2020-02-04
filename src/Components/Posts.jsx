@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import SinglePost from "./SinglePost";
 import { Container } from "react-bootstrap";
+import PropTypes from 'prop-types'
 
 export default class Posts extends Component {
   constructor(props) {
@@ -19,6 +20,8 @@ export default class Posts extends Component {
       </Container>
     );
   }
+
+  
   componentDidMount = async () => {
     const responsePosts = await fetch(
       process.env.REACT_APP_BASE_URL + "/posts"
